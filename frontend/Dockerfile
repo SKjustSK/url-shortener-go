@@ -22,7 +22,7 @@ FROM nginx:alpine
 # Copy the build output from Stage 1 to Nginx's html folder
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Add a simple Nginx config to handle React Router (redirects 404s to index.html)
+# Nginx config to handle React Router (redirects 404s to index.html)
 # This fixes the "refresh on a subpage breaks the app" issue
 RUN echo 'server { \
     listen 80; \

@@ -9,4 +9,8 @@ export default defineConfig({
     react(), 
     tailwindcss(),
   ],
+  server: {
+    port: 4000,
+    strictPort: true, // If true, Vite will quit if the port is already in use
+  },
 })
