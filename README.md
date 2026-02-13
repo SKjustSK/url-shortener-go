@@ -1,6 +1,3 @@
-Here is the complete, copy-pastable `README.md` file. I've structured it to be professional and ready for your GitHub repository.
-
-```markdown
 # url-shortener-go
 
 A high-performance URL shortening service built with **Go**, **Redis**, and **React (Vite)**.
@@ -82,5 +79,3 @@ The current configuration is set to an **API_QUOTA** of `10` requests per period
 ```
 
 **Do you have your `docker-compose.yml` file ready, or should I generate one that matches this configuration for you?**
-
-```
