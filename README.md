@@ -16,12 +16,12 @@ Ensure your environment files are located in the following directories:
 
 **Backend Configuration (`backend/api/.env`):**
 ```env
-DB_ADDR="db:6379"
+DB_ADDR="db:4000"
 DB_PASS=""
 APP_PORT=":3000"
 DOMAIN="localhost:3000"
 API_QUOTA=10
-FRONTEND_DOMAIN="http://localhost:5173"
+FRONTEND_DOMAIN="http://localhost:4000"
 
 ```
 
@@ -46,9 +46,9 @@ docker-compose up --build
 
 Once the containers are healthy:
 
-* **Frontend UI:** [http://localhost:5173](https://www.google.com/search?q=http://localhost:5173)
+* **Frontend UI:** [http://localhost:4000](https://www.google.com/search?q=http://localhost:4000)
 * **Backend API:** [http://localhost:3000](https://www.google.com/search?q=http://localhost:3000)
-* **Redis Store:** Internal port `6379` (Accessible via the `db` service name)
+* **Redis Store:** Internal port `4000` (Accessible via the `db` service name)
 
 ---
 
