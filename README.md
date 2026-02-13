@@ -75,7 +75,3 @@ Once the containers are healthy:
 ## API Limits
 
 The current configuration is set to an **API_QUOTA** of `10` requests per period to prevent service abuse. You can modify this in the `backend/api/.env` file.
-
-```
-
-**Do you have your `docker-compose.yml` file ready, or should I generate one that matches this configuration for you?**
