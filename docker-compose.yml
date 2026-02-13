@@ -1,8 +1,9 @@
 services: 
-  api: 
+  backend: 
     build: 
       context: ./backend/api
       dockerfile: Dockerfile
+    image: skjustsk/url-shortener-backend:latest
     ports:  
       - "3000:3000" 
     env_file:
@@ -20,6 +21,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+    image: skjustsk/url-shortener-frontend:latest
     ports:
-      - "4000:80" # Maps Host 5173 -> Container 80 (Nginx)
+      - "4000:80" # Maps Host 4000 -> Container 80 (Nginx)
     restart: always
