@@ -23,7 +23,7 @@ WORKDIR /app
 # Copy binary from builder
 COPY --from=builder /build/main /app/
 # Copy .env from the local directory
-# COPY .env /app/.env
+COPY .env /app/.env
 
 EXPOSE 3000
 
