@@ -1,0 +1,25 @@
+services: 
+  api: 
+    build: 
+      context: ./backend/api
+      dockerfile: Dockerfile
+    ports:  
+      - "3000:3000" 
+    env_file:
+      - ./backend/api/.env
+
+  db: 
+    image: redis:alpine
+    ports: 
+      - "6379:6379" 
+    volumes: 
+      - ./backend/data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80" # Maps Host 5173 -> Container 80 (Nginx)
+    restart: always

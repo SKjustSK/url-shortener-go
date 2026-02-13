@@ -1,32 +1,45 @@
-# If you prefer the allow list template instead of the deny list, see community template:
-# https://github.com/github/gitignore/blob/main/community/Golang/Go.AllowList.gitignore
-#
-# Binaries for programs and plugins
+# --- General / OS ---
+.DS_Store
+.vscode/
+.idea/
+*.log
+.env
+.env.local
+.env.*.local
+
+# --- Frontend (React + Vite) ---
+node_modules/
+dist/
+dist-ssr/
+*.local
+.eslintcache
+# Vite specific
+.vite/
+
+# --- Backend (Go) ---
+# Binaries and architectures
+bin/
+main
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
-
-# Test binary, built with `go test -c`
-*.test
-
-# Code coverage profiles and other test artifacts
+# Test coverage
 *.out
-coverage.*
-*.coverprofile
-profile.cov
+# Go modules vendor (if you use it)
+vendor/
 
-# Dependency directories (remove the comment below to include it)
-# vendor/
+# --- Redis & Infrastructure ---
+# If you run Redis locally and it saves snapshots
+dump.rdb
+appendonly.aof
+# Docker volumes (if you store redis data in a local folder)
+.docker-data/
+redis-data/
 
-# Go workspace file
-go.work
-go.work.sum
-
-# env file
+# --- Environment Secrets (CRITICAL) ---
+# Never commit your database credentials or API keys
 .env
-
-# Editor/IDE
-# .idea/
-# .vscode/
+backend/.env
+frontend/.env
